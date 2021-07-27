@@ -19,7 +19,7 @@ class CreateProductsTable extends Migration
             $table->longText('long_description')->nullable();
             $table->mediumText('short_description')->nullable();
             $table->foreignId('subdepartment_id')->constrained('subdepartments');
-            $table->tinyInteger('status')->default(1);
+            $table->boolean('status')->default(1);
             $table->timestamps();
             $table->softDeletes();
         });

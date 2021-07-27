@@ -18,7 +18,7 @@ class CreateOrdersTable extends Migration
             $table->string('name');
             $table->date('date_order')->nullable();
             $table->longText('observation')->nullable();
-            $table->tinyInteger('status')->default(0);
+            $table->boolean('status')->default(0);
             $table->timestamps();
             $table->softDeletes();
         });

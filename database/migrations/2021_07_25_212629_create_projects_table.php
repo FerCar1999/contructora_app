@@ -21,6 +21,7 @@ class CreateProjectsTable extends Migration
             $table->date('start');
             $table->date('end')->nullable();
             $table->foreignId('user_id')->constrained('users');
+            $table->boolean('status')->default(1);
             $table->timestamps();
             $table->softDeletes();
         });

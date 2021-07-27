@@ -17,6 +17,7 @@ class CreateProductProvidersTable extends Migration
             $table->id();
             $table->foreignId('product_id')->constrained('products');
             $table->foreignId('provider_id')->constrained('providers');
+            $table->boolean('status')->default(1);
             $table->timestamps();
             $table->softDeletes();
         });

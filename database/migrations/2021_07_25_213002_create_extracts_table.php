@@ -17,8 +17,9 @@ class CreateExtractsTable extends Migration
             $table->id();
             $table->foreignId('project_id')->constrained('projects');
             $table->date('date_extract');
-            $table->integer('quantity');
+            $table->boolean('status')->default(0);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

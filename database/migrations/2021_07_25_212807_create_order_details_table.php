@@ -17,9 +17,10 @@ class CreateOrderDetailsTable extends Migration
             $table->id();
             $table->foreignId('product_provider_id')->constrained('product_providers');
             $table->integer('quantity');
-            $table->integer('amount');
-            $table->tinyInteger('status')->default(1);
+            $table->decimal('amount', 10, 2, true);
+            $table->boolean('status')->default(1);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
