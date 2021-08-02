@@ -19,7 +19,7 @@ class UnitController extends Controller
      */
     public function index()
     {
-        return view('unit.index', ['units' => $this->unit->all()]);
+        return $this->unit->all();
     }
 
     /**
